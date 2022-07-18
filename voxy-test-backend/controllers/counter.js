@@ -4,6 +4,7 @@ async function countWords(text) {
         return wordCount ? wordCount.length : 0;
     } catch (e) {
         console.error(`[countWords-Controller] ${e.message}`)
+        return 0
     }
 }
 
