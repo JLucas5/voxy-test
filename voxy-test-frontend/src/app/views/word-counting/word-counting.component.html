@@ -11,11 +11,15 @@
                 <textarea formControlName="text" name="word-counter" id="word-counter" rows="10"></textarea>
             </div>
             <div class="button-wrapper">
-                <button mat-raised-button (click)="onSubmit()" color="primary" class="count-button">Count !!!</button>
+                <button mat-raised-button (click)="onSubmit()" color="primary" class="count-button" [disabled]="disabledFlag===true">Count !!!</button>
+            </div>
+            <div *ngIf="wordCount > 0">
+               <p class="result">
+                    I've counted {{wordCount}} word(s) on your text! Yay!
+               </p>
             </div>
         </form>
-        <div>
-
+        <div >
         </div>
     </section>
 </div>

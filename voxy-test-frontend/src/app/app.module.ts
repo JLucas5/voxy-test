@@ -5,6 +5,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatSnackBarModule  } from '@angular/material/snack-bar';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from "@angular/common/http";
 import { AppComponent } from './app.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { WordCountingComponent } from './views/word-counting/word-counting.component';
@@ -21,7 +22,8 @@ import { WordCountingComponent } from './views/word-counting/word-counting.compo
     MatButtonModule,
     ReactiveFormsModule,
     MatFormFieldModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
