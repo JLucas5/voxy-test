@@ -7,15 +7,14 @@ const app = express()
 app.post('/count-words', countWords)
 
 async function countWords(req, res) {
-	try {
+console.log(req.body)
         const text = req.body.text
-        const wordNumber = await counterController.countWords(text)
-		res.status(200).send({'wordNumber': wordNumber})
+        const wordCount = await counterController.countWords(text)
+        
+        if(wordCount <= 0)
+		    res.status(400).send({'Error': true})
 
-	} catch (err) {
-		console.error(`[countWords-Router] ${err.message}`)
-		res.status(400).send({'Error': true})
-	}
+		res.status(200).send({wordCount})
 }
 
 module.exports = app
