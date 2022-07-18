@@ -1,0 +1,44 @@
+#title-section {
+    margin-bottom: 10%;
+}
+
+#title-section > h1{
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.subtitle-wrapper {
+    color: gray;
+    width: 40%;
+    flex-direction: row-reverse;
+}
+
+.textarea-container {
+    flex-grow: 1;
+    display: flex;
+}
+
+textarea {
+    width: 100%;
+    resize: vertical
+}
+
+.count-button{
+    width: 90px;
+    height: 45px;
+    margin: 5px 0px;
+}
+.count-button:hover{
+  opacity: .9;
+}
+
+
+.button-wrapper{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#counter-section > div, #counter-section > form{
+    flex: 1;
+}
+

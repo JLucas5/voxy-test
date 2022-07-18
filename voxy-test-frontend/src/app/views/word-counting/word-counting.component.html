@@ -1,0 +1,21 @@
+<div class="container">
+    <section id="title-section" class="flex-column center-align">
+        <h1>Voxy Word Counter</h1>
+        <div class="flex-row subtitle-wrapper">
+            <p>Counting your words since 2022</p>
+        </div>
+    </section>
+    <section id="counter-section" class="flex-row">
+        <form [formGroup]="myForm">
+            <div class="textarea-container">
+                <textarea formControlName="text" name="word-counter" id="word-counter" rows="10"></textarea>
+            </div>
+            <div class="button-wrapper">
+                <button mat-raised-button (click)="onSubmit()" color="primary" class="count-button">Count !!!</button>
+            </div>
+        </form>
+        <div>
+
+        </div>
+    </section>
+</div>

@@ -1,7 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+import { WordCountingComponent } from './views/word-counting/word-counting.component';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: WordCountingComponent
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
