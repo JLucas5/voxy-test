@@ -44,14 +44,9 @@ ng serve
 The web app should now be running on [http://localhost:4200/](http://localhost:4200/)
 
 ## Limitations, known issues and TODOs
-
-* Isolated punctuation or other characters that should not be counted as a "word" are counted for. Although neatly formatted texts should not encounter much of a problem in this.
-* Without response form the server after a request, the web app stays frozen waiting and the page needs to be reloaded.
-* Due to time contrains, only the back-end contains unit tests implemented.
-* The server url is hardcoded on a service in the frontend for practical reasons. Should be changed to a environment variable in the future.
-
-
-
-
-
-Any questions can be sent to joaolucaspachecoab@gmail.com
+Take a look at the [Issues tab](https://github.com/JLucas5/voxy-test/issues) here on the Github repository! You can also submit a new issue if you find necessary! =]
+    
+    
+    
+    
+Any questions can be sent to joaolucaspachecoab@gmail.com or added tho the Issues.
