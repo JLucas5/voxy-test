@@ -9,3 +9,7 @@ export class ConstantsService {
 
   serverUrl="http://localhost:8080"
 }
+
+/**
+ * Mockup file. This file should be substituted by ENV variables in the future
+ */

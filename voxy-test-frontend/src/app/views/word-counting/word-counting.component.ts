@@ -43,12 +43,14 @@ export class WordCountingComponent implements OnInit {
     console.log(this.wordCount)
     this.disabledFlag = false
   }
-
+  
   openSnackBar(message: string, action: string) {
     this.snackBar.open(message, action, {verticalPosition: "top", duration: 4000});
   }
 
-  //Validation method
+/**
+ * Validator function for Form validation
+ */
   public noWhitespaceValidator(control: FormControl) {
     const isWhitespace = (control.value || '').trim().length === 0;
     const isValid = !isWhitespace;
