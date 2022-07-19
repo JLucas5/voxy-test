@@ -2,8 +2,8 @@
 Voxy Wordsy is an all purpose word counter, counting words since 2022!
 ## Technologies Used
 * Javascript
-*	Angular 12
-* Node.js
+* [Angular 12](https://angular.io/guide/setup-local)
+* [Node.js](https://nodejs.org/en/download/)
 * Express.js
 ## How to Run
 This repository encompasses, for practical reasons, both front and back-end of the project. Therefore, two applications must be run. 
