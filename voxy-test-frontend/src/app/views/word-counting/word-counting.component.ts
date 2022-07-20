@@ -33,15 +33,23 @@ export class WordCountingComponent implements OnInit {
   }
 
   async onSubmit(){
+    this.wordCount = 0
+
     if (this.myForm.invalid) {
       this.openSnackBar("There is no text to count!!! =[", "Dismiss")
       return
     } 
     this.disabledFlag = true
-    
-    this.wordCount = await this.counterService.requestWordCount(this.text?.value)
-    console.log(this.wordCount)
+    const {error, wordCount} = await this.counterService.requestWordCount(this.text?.value)
     this.disabledFlag = false
+
+    if (error) {
+      this.openSnackBar(error, "Dismiss")
+      return
+    }
+
+    this.wordCount = wordCount
+    console.log(this.wordCount)
   }
   
   openSnackBar(message: string, action: string) {

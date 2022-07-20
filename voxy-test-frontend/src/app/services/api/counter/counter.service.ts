@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { timeout, catchError } from 'rxjs/operators';
+import { of } from 'rxjs';
 import { ConstantsService } from '../constants/constants.service';
-
 
 @Injectable({
   providedIn: 'root'
@@ -17,9 +18,10 @@ export class CounterService {
    */
   async requestWordCount(text:String) {
 		const response:any = await this.httpCliente.post(`${this.constants.serverUrl}/counter/count-words`, { 'text': text})
+    .pipe(timeout(3000), catchError(_ => of({error: "Request timeout", wordCount: 0})))
     .toPromise()
 
-    return response.wordCount
+    return response
 	}
 
   async new(){
